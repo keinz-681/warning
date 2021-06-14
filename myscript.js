@@ -34,10 +34,10 @@ play_se();
 
 
 
-//端末情報取得
-var device = navigator.userAgent.match(/Android|iPhone|iPad/);
-if (device == null){
-    device = '端末';
+//端末情報取得//
+var device = navigator.userAgent.match(/Android|iPhone|iPad|Windows/);//android,iphone,ipad,windowsは表示。
+if (device == null){//それ以外は
+    device = '端末';//端末と表示
 }
 $('#device').text(device);
 
